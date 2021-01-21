@@ -52,10 +52,15 @@ function Listagem() {
               <>
                 <ul key={list._id}>
                   <ContainerLista>
-                    {/* <button type="button" onClick={() => getById(list._id)}>
+                    <button type="button" style={{border: '1px solid lightgray',
+                    font: 'Trebuchet',color: 'darkblue',fontWeight: 'bold', 
+                    fontSize: '15px', marginBottom: '6px', background: 'lightyellow'}} onClick={() => getById(list._id)}>
                       Detalhes
-                    </button> */}
-                    <button type="button" onClick={() => getById(list._id)}>
+                    </button>
+                    <button style={{border: '1px solid lightgray',
+                    font: 'Trebuchet', color: 'darkblue',fontWeight: 'bold', 
+                    fontSize: '15px', background: 'lightyellow'}}
+                     type="button" onClick={() => getById(list._id)}>
                       Comprar
                     </button>
                     <div style={{ paddingTop: '18px' }} />
