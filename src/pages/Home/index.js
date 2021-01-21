@@ -44,46 +44,45 @@ function Listagem() {
         <BodyContainer>
           {/* <Header /> */}
           <TextContainer>
-            <h2>Loja Virtual</h2>
+            <h2>Sei la o que</h2>
             <br />
           </TextContainer>
-          {/* {lista.map((list) => { */}
-          {/* return ( */}
-          <>
-            <ul>
-              <ContainerLista>
-                {/* <button type="button" onClick={() => getById(list._id)}>
+          {lista.map((list) => {
+            return (
+              <>
+                <ul key={list._id}>
+                  <ContainerLista>
+                    {/* <button type="button" onClick={() => getById(list._id)}>
                       Detalhes
                     </button> */}
-                <button type="button">Detalhes</button>
-                {/* <button type="button" onClick={() => getById(list._id)}> */}
-                {/* Comprar
-                </button> */}
-                <p>Entrando</p>
-                <div style={{ paddingTop: '18px' }} />
+                    <button type="button" onClick={() => getById(list._id)}>
+                      Comprar
+                    </button>
+                    <div style={{ paddingTop: '18px' }} />
 
-                {/* <ContainerImg>
-                  <img
-                    style={{ width: '25%' }}
-                    src={`https://loja-sistem.herokuapp.com/files/${list.image}`}
-                    alt="imagem"
-                  />
+                    <ContainerImg>
+                      <img
+                        style={{ width: '25%' }}
+                        src={`http://localhost:3001/files/${list.image}`}
+                        alt="imagem"
+                      />
 
-                  <ContainerData>
-                    <Lista>
-                      <strong>Produto: </strong>
-                      {list.title}
-                    </Lista>
-                    <Lista>
-                      <strong>Preço: </strong>
-                      {list.price}
-                    </Lista>
-                  </ContainerData>
-                </ContainerImg> */}
-              </ContainerLista>
-            </ul>
-          </>
-          {/* )})} */}
+                      <ContainerData>
+                        <Lista>
+                          <strong>Produto: </strong>
+                          {list.title}
+                        </Lista>
+                        <Lista>
+                          <strong>Preço: </strong>
+                          {list.price}
+                        </Lista>
+                      </ContainerData>
+                    </ContainerImg>
+                  </ContainerLista>
+                </ul>
+              </>
+            )
+          })}
         </BodyContainer>
       </Container>
     </>
