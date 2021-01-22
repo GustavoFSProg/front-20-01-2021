@@ -36,7 +36,8 @@ function Listagem() {
 
   useEffect(() => {
     getAll()
-  })
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
 
   return (
     <>
@@ -44,7 +45,7 @@ function Listagem() {
         <BodyContainer>
           {/* <Header /> */}
           <TextContainer>
-            <h2>Sei la o que</h2>
+            <h2>Home</h2>
             <br />
           </TextContainer>
           {lista.map((list) => {
@@ -52,15 +53,33 @@ function Listagem() {
               <>
                 <ul key={list._id}>
                   <ContainerLista>
-                    <button type="button" style={{border: '1px solid lightgray',
-                    font: 'Trebuchet',color: 'darkblue',fontWeight: 'bold', 
-                    fontSize: '15px', marginBottom: '6px', background: 'lightyellow'}} onClick={() => getById(list._id)}>
+                    <button
+                      type="button"
+                      style={{
+                        border: '1px solid lightgray',
+                        font: 'Trebuchet',
+                        color: 'darkblue',
+                        fontWeight: 'bold',
+                        fontSize: '15px',
+                        marginBottom: '6px',
+                        background: 'lightyellow',
+                      }}
+                      onClick={() => getById(list._id)}
+                    >
                       Detalhes
                     </button>
-                    <button style={{border: '1px solid lightgray',
-                    font: 'Trebuchet', color: 'darkblue',fontWeight: 'bold', 
-                    fontSize: '15px', background: 'lightyellow'}}
-                     type="button" onClick={() => getById(list._id)}>
+                    <button
+                      style={{
+                        border: '1px solid lightgray',
+                        font: 'Trebuchet',
+                        color: 'darkblue',
+                        fontWeight: 'bold',
+                        fontSize: '15px',
+                        background: 'lightyellow',
+                      }}
+                      type="button"
+                      onClick={() => history.push('/cart')}
+                    >
                       Comprar
                     </button>
                     <div style={{ paddingTop: '18px' }} />
