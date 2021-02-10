@@ -36,7 +36,7 @@ function Profile() {
     <Container>
       <BodyContainer>
         <TextContainer>
-          <h2 style={{color: 'purple'}}>Profile: </h2>
+          <h2 style={{ color: 'purple' }}>Profile: </h2>
           <br />
         </TextContainer>
         {lista.map((list) => {
@@ -52,7 +52,7 @@ function Profile() {
                   <ContainerImg>
                     <img
                       style={{ width: '25%' }}
-                      src={`http://localhost:3001/files/${list.image}`}
+                      src={`https://api-ultima.herokuapp.com/files/${list.image}`}
                       alt="imagem"
                     />
 
