@@ -62,7 +62,7 @@ function Listagem() {
                     <ContainerImg>
                       <img
                         style={{ width: '25%' }}
-                        src={`http://localhost:3001/files/${list.image}`}
+                        src={`https://api-ultima.herokuapp.com/files/${list.image}`}
                         alt="imagem"
                       />
 

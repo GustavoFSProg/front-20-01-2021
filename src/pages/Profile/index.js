@@ -36,7 +36,7 @@ function Profile() {
     <Container>
       <BodyContainer>
         <TextContainer>
-          <h2>Profile: </h2>
+          <h2 style={{color: 'purple'}}>Profile: </h2>
           <br />
         </TextContainer>
         {lista.map((list) => {
