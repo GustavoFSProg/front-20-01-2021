@@ -39,7 +39,9 @@ function Profile() {
   return (
     <Container>
       <BodyContainer>
-        <Header />
+        <div style={{ marginTop: '-258px' }}>
+          <Header />
+        </div>
         <TextContainer>
           <h2 style={{ color: 'purple' }}>Profile: </h2>
           <br />
@@ -55,6 +57,9 @@ function Profile() {
                   color: 'yellow',
                   padding: '5px',
                   marginBottom: '4px',
+                  borderRadius: '7px',
+                  border: '1px solid #086871',
+                  fontSize: '16px',
                 }}
                 onClick={() => history.push('/cart')}
               >

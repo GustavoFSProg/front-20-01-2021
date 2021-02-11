@@ -18,6 +18,7 @@ function Header() {
               textDecoration: 'none',
               paddingRight: '13px',
               fontWeight: 'bold',
+              marginRight: '15px',
             }}
           >
             Home
@@ -34,6 +35,7 @@ function Header() {
               textDecoration: 'none',
               paddingRight: '13px',
               fontWeight: 'bold',
+              marginRight: '15px',
             }}
           >
             Profile

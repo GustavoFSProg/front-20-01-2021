@@ -59,7 +59,9 @@ function Listagem() {
                         padding: '5px',
                         color: 'yellow',
                         marginBottom: '4px',
-                        borderRadius: '5px',
+                        borderRadius: '7px',
+                        border: '1px solid #086871',
+                        fontSize: '16px',
                       }}
                       onClick={() => getById(list._id)}
                     >
@@ -72,6 +74,9 @@ function Listagem() {
                         background: '#086871',
                         color: 'yellow',
                         padding: '5px',
+                        borderRadius: '7px',
+                        border: '1px solid #086871',
+                        fontSize: '16px',
                       }}
                       onClick={() => history.push('/cart')}
                     >
