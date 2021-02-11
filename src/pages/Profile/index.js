@@ -54,7 +54,7 @@ function Profile() {
                     padding: '5px',
                     borderRadius: '7px',
                     border: '1px solid #086871',
-                    fontSize: '16px',
+                    fontSize: '14px',
                   }}
                   onClick={() => history.push('/cart')}
                 >
@@ -93,7 +93,7 @@ function Profile() {
                   padding: '5px',
                   borderRadius: '7px',
                   border: '1px solid #086871',
-                  fontSize: '16px',
+                  fontSize: '14px',
                 }}
                 onClick={() => history.push('/cart')}
               >

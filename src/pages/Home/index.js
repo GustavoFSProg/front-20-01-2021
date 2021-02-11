@@ -61,7 +61,7 @@ function Listagem() {
                         marginBottom: '4px',
                         borderRadius: '7px',
                         border: '1px solid #086871',
-                        fontSize: '16px',
+                        fontSize: '14px',
                       }}
                       onClick={() => getById(list._id)}
                     >
@@ -76,7 +76,7 @@ function Listagem() {
                         padding: '5px',
                         borderRadius: '7px',
                         border: '1px solid #086871',
-                        fontSize: '16px',
+                        fontSize: '14px',
                       }}
                       onClick={() => history.push('/cart')}
                     >
