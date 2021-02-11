@@ -43,7 +43,7 @@ function Profile() {
           <Header />
         </div>
         <TextContainer>
-          <h2 style={{ color: 'purple' }}>Profile: </h2>
+          <h2 style={{ color: 'black' }}>Profile: </h2>
           <br />
         </TextContainer>
 
