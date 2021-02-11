@@ -40,6 +40,10 @@ export const ContainerLista = styled.div`
   display: flex;
   flex-direction: column;
   width: 95%;
+
+  @media screen and (max-width: 600px) {
+    width: 76%;
+  }
 `
 export const Lista = styled.ul`
   text-decoration: none;

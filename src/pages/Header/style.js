@@ -1,13 +1,17 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
-  width: 100vw;
   /* margin: 32px auto; */
   background: #03838f;
   justify-content: center;
   display: flex;
   /* height: 50%; */
   color: white;
+  width: 100vw;
+
+  @media screen and (max-width: 600px) {
+    width: 120vw;
+  }
 `
 export const List = styled.li`
   display: flex;
