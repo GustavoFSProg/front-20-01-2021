@@ -40,7 +40,7 @@ function Profile() {
         <BodyContainer>
           <Header />
           <TextContainer>
-            <h2>Produtos: </h2>
+            <h2>Perfil: </h2>
             <br />
           </TextContainer>
           <>
