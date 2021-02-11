@@ -7,7 +7,7 @@ export const Container = styled.div`
   max-width: 100%;
   height: 100vh;
   /* margin: 32px auto; */
-  background: #e6ffff;
+  background: #77b4ba;
   justify-content: center;
   display: flex;
 `
@@ -31,7 +31,7 @@ export const BodyContainer = styled.div`
 `
 
 export const ContainerLista = styled.div`
-  background: #00cccc;
+  background: #478e95;
   padding: 24px;
   border-radius: 8px;
   position: relative;

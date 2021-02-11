@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useHistory } from 'react-router-dom'
 import api from '../../services/api'
+import Header from '../Header/index'
 import {
   ContainerImg,
   Container,
@@ -41,6 +42,7 @@ function Listagem() {
     <>
       <Container>
         <BodyContainer>
+          <Header />
           <TextContainer>
             <h2>Produtos: </h2>
             <br />
@@ -50,12 +52,29 @@ function Listagem() {
               <>
                 <ul key={list._id}>
                   <ContainerLista>
-                    <button type="button" onClick={() => getById(list._id)}>
-                      Detalhes
+                    <button
+                      type="button"
+                      style={{
+                        background: '#086871',
+                        padding: '5px',
+                        color: 'yellow',
+                        marginBottom: '4px',
+                      }}
+                      onClick={() => getById(list._id)}
+                    >
+                      <strong>Detalhes</strong>
                     </button>
 
-                    <button type="button" onClick={() => history.push('/cart')}>
-                      Comprar
+                    <button
+                      type="button"
+                      style={{
+                        background: '#086871',
+                        color: 'yellow',
+                        padding: '5px',
+                      }}
+                      onClick={() => history.push('/cart')}
+                    >
+                      <strong>Comprar</strong>
                     </button>
                     <div style={{ paddingTop: '18px' }} />
 

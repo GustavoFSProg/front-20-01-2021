@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import api from '../../services/api'
 import { useHistory } from 'react-router-dom'
+import Header from '../Header/index'
 
 import {
   ContainerImg,
@@ -35,6 +36,7 @@ function Profile() {
   return (
     <Container>
       <BodyContainer>
+        <Header />
         <TextContainer>
           <h2 style={{ color: 'purple' }}>Profile: </h2>
           <br />
@@ -44,8 +46,17 @@ function Profile() {
             <>
               <ul key={list._id}>
                 <ContainerLista>
-                  <button type="button" onClick={() => history.push('/cart')}>
-                    Comprar
+                  <button
+                    type="button"
+                    style={{
+                      background: '#086871',
+                      color: 'yellow',
+                      padding: '5px',
+                      marginBottom: '4px',
+                    }}
+                    onClick={() => history.push('/cart')}
+                  >
+                    <strong>Comprar</strong>
                   </button>
                   <div style={{ paddingTop: '18px' }} />
 
