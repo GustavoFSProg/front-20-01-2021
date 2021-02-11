@@ -36,7 +36,7 @@ function Listagem() {
 
   useEffect(() => {
     getAll()
-  })
+  }, [])
 
   return (
     <>
@@ -59,6 +59,7 @@ function Listagem() {
                         padding: '5px',
                         color: 'yellow',
                         marginBottom: '4px',
+                        borderRadius: '5px',
                       }}
                       onClick={() => getById(list._id)}
                     >

@@ -17,6 +17,7 @@ function Header() {
               color: 'white',
               textDecoration: 'none',
               paddingRight: '13px',
+              fontWeight: 'bold',
             }}
           >
             Home
@@ -32,6 +33,7 @@ function Header() {
               color: 'white',
               textDecoration: 'none',
               paddingRight: '13px',
+              fontWeight: 'bold',
             }}
           >
             Profile
@@ -47,6 +49,7 @@ function Header() {
               color: 'white',
               textDecoration: 'none',
               paddingRight: '13px',
+              fontWeight: 'bold',
             }}
           >
             Register

@@ -1,34 +1,16 @@
+// eslint-disable-next-line no-unused-vars
+import React from 'react'
 import styled from 'styled-components'
 
 export const Container = styled.div`
-  width: 100vw;
+  width: 100%;
+  max-width: 100%;
+  height: 100vh;
   /* margin: 32px auto; */
-  background: #03838f;
+  background: #77b4ba;
   justify-content: center;
   display: flex;
-  /* height: 50%; */
-  color: white;
 `
-export const List = styled.li`
-  display: flex;
-  list-style: none;
-  font-family: Trebuchet;
-  font-size: 15px;
-  color: white;
-  text-decoration: none;
-  width: 100%;
-`
-
-// export const Container = styled.div`
-//   width: 100%;
-//   max-width: 100%;
-//   height: auto;
-//   /* margin: 32px auto; */
-//   background: #77b4ba;
-
-//   justify-content: center;
-//   display: flex;
-// `
 export const ContainerData = styled.div`
   display: flex;
   flex-direction: column;
@@ -56,11 +38,10 @@ export const ContainerLista = styled.div`
   border: 1px solid #d9d9d9;
   display: flex;
   flex-direction: column;
-  color: white;
 `
 export const Lista = styled.ul`
   text-decoration: none;
-  color: white;
+  color: black;
   font-family: arial;
   font-size: 15px;
   /* margin-left: 10px; */
@@ -79,12 +60,10 @@ export const ListaUl = styled.ul`
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 24px;
   list-style: none;
-  color: white;
 `
 export const TextContainer = styled.div`
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
 `
