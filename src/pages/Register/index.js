@@ -33,9 +33,9 @@ export default function Register() {
         data.append('price', price)
         data.append('image', image)
 
-        // await api.post('/product/register', data)
+        await api.post('/product/register', data)
 
-        // alert('Cadastro realizado com sucesso!')
+        alert('Cadastro realizado com sucesso!')
         return history.push('/')
       }
     } catch (error) {
