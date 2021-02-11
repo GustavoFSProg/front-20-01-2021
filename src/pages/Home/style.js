@@ -39,6 +39,7 @@ export const ContainerLista = styled.div`
   border: 1px solid #d9d9d9;
   display: flex;
   flex-direction: column;
+  width: 95%;
 `
 export const Lista = styled.ul`
   text-decoration: none;

@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react'
-import api from '../../services/api'
 import { useHistory } from 'react-router-dom'
+import api from '../../services/api'
 import Header from '../Header/index'
-
 import {
   ContainerImg,
   Container,
@@ -12,7 +11,6 @@ import {
   ContainerData,
   TextContainer,
 } from './style'
-
 function Profile() {
   const [lista, setLista] = useState([])
   const history = useHistory()
@@ -37,17 +35,54 @@ function Profile() {
   }, [])
 
   return (
-    <Container>
-      <BodyContainer>
-        <div style={{ marginTop: '-258px' }}>
+    <>
+      <Container>
+        <BodyContainer>
           <Header />
-        </div>
-        <TextContainer>
-          <h2 style={{ color: 'black' }}>Profile: </h2>
-          <br />
-        </TextContainer>
+          <TextContainer>
+            <h2>Produtos: </h2>
+            <br />
+          </TextContainer>
+          <>
+            <ul key={lista._id}>
+              <ContainerLista>
+                <button
+                  type="button"
+                  style={{
+                    background: '#086871',
+                    color: 'yellow',
+                    padding: '5px',
+                    borderRadius: '7px',
+                    border: '1px solid #086871',
+                    fontSize: '16px',
+                  }}
+                  onClick={() => history.push('/cart')}
+                >
+                  <strong>Comprar</strong>
+                </button>
+                <div style={{ paddingTop: '18px' }} />
 
-        <>
+                <ContainerImg>
+                  <img
+                    style={{ width: '25%' }}
+                    src={`https://api-ultima.herokuapp.com/files/${lista.image}`}
+                    alt="imagem"
+                  />
+
+                  <ContainerData>
+                    <Lista>
+                      <strong>Nome: </strong>
+                      {lista.title}
+                    </Lista>
+                    <Lista>
+                      <strong>Preço: </strong>
+                      {lista.price}
+                    </Lista>
+                  </ContainerData>
+                </ContainerImg>
+              </ContainerLista>
+            </ul>
+          </>
           <ul key={lista._id}>
             <ContainerLista>
               <button
@@ -56,7 +91,6 @@ function Profile() {
                   background: '#086871',
                   color: 'yellow',
                   padding: '5px',
-                  marginBottom: '4px',
                   borderRadius: '7px',
                   border: '1px solid #086871',
                   fontSize: '16px',
@@ -87,9 +121,9 @@ function Profile() {
               </ContainerImg>
             </ContainerLista>
           </ul>
-        </>
-      </BodyContainer>
-    </Container>
+        </BodyContainer>
+      </Container>
+    </>
   )
 }
 

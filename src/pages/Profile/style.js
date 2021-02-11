@@ -5,9 +5,10 @@ import styled from 'styled-components'
 export const Container = styled.div`
   width: 100%;
   max-width: 100%;
-  height: 100vh;
+  height: 2500%;
   /* margin: 32px auto; */
   background: #77b4ba;
+
   justify-content: center;
   display: flex;
 `
@@ -18,7 +19,6 @@ export const ContainerData = styled.div`
 
 export const ContainerImg = styled.div`
   width: 100%;
-  height: 100%;
   display: flex;
   flex-direction: row;
 `
@@ -38,6 +38,7 @@ export const ContainerLista = styled.div`
   border: 1px solid #d9d9d9;
   display: flex;
   flex-direction: column;
+  width: 95%;
 `
 export const Lista = styled.ul`
   text-decoration: none;
