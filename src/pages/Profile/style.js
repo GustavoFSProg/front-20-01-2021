@@ -41,7 +41,7 @@ export const ContainerLista = styled.div`
   width: 95%;
 
   @media screen and (max-width: 600px) {
-    width: 76%;
+    width: 74%;
   }
 `
 export const Lista = styled.ul`
