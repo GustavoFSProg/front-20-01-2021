@@ -54,9 +54,9 @@ function Header() {
               fontWeight: 'bold',
             }}
           >
-            Register
+            Cadastro
           </Link>
-          <Link
+          {/* <Link
             to="/update"
             style={{
               display: 'flex',
@@ -70,7 +70,7 @@ function Header() {
             }}
           >
             Update
-          </Link>
+          </Link> */}
           <Link
             to="/login"
             style={{
@@ -86,7 +86,7 @@ function Header() {
           >
             Login
           </Link>
-          <Link
+          {/* <Link
             to="/logout"
             style={{
               display: 'flex',
@@ -100,7 +100,7 @@ function Header() {
             }}
           >
             Logout
-          </Link>
+          </Link> */}
         </List>
       </ul>
     </Container>
