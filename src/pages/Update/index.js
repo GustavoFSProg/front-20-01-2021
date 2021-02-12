@@ -78,7 +78,7 @@ function Update() {
         <BodyContainer>
           <Header />
           <TextContainer>
-            <h2>Editar Produto </h2>
+            <h3>Editar Produto </h3>
             <br />
           </TextContainer>
           <ContainerLista>

@@ -55,7 +55,7 @@ export default function Register() {
         <BodyContainer>
           <Header />
           <TextContainer>
-            <h2>Cadastro de Produtos: </h2>
+            <h3>Cadastro de Produtos: </h3>
             <br />
           </TextContainer>
           <ContainerLista>
