@@ -56,7 +56,7 @@ export default function SimpleMenu() {
           width="18%"
         />
       </Button>
-      <div style={{ float: 'right', right: '70%', position: 'relative' }}>
+      <div style={{ float: 'right', right: '40%', position: 'relative' }}>
         <Menu
           id="simple-menu"
           anchorEl={anchorEl}
