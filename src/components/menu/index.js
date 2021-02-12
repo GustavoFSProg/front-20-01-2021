@@ -65,7 +65,7 @@ export default function SimpleMenu() {
           onClose={handleClose}
         >
           <MenuItem onClick={handleHome}>Home</MenuItem>
-          <MenuItem onClick={handleProfile}>Perfil</MenuItem>
+          {/* <MenuItem onClick={handleProfile}>Perfil</MenuItem> */}
           <MenuItem onClick={handleLogin}>Login</MenuItem>
           <MenuItem onClick={handleRegister}>Cadastro</MenuItem>
           <MenuItem onClick={handleUpdate}>Update</MenuItem>
