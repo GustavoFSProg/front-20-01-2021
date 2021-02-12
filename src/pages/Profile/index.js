@@ -56,7 +56,7 @@ function Profile() {
                     border: '1px solid #086871',
                     fontSize: '14px',
                   }}
-                  onClick={() => history.push('/cart')}
+                  onClick={() => alert('You click me!')}
                 >
                   <strong>Comprar</strong>
                 </button>
@@ -95,7 +95,7 @@ function Profile() {
                   border: '1px solid #086871',
                   fontSize: '14px',
                 }}
-                onClick={() => history.push('/cart')}
+                onClick={() => alert('You click me!')}
               >
                 <strong>Comprar</strong>
               </button>
