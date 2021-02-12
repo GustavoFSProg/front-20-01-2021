@@ -11,36 +11,40 @@ import {
   ContainerData,
   TextContainer,
 } from './style'
-import './styles.css'
-
-export default function Register() {
+function Update() {
   const [title, setTitle] = useState('')
   const [price, setPrice] = useState('')
   const [image, setImage] = useState([])
 
+  const [lista, setLista] = useState([])
   const history = useHistory()
 
   async function handleSubmit(event) {
     event.preventDefault()
 
     try {
-      const data = new FormData()
+      const id = localStorage.getItem('ID')
+      const token = localStorage.getItem('Token')
+      // const data = new FormData()
+
+      console.log(token)
+
+      const data = {
+        title,
+        price,
+        token,
+      }
 
       if (!typeof price === Number) {
         return alert('O preço deve ser um numero!!')
       } else {
-        const token = localStorage.getItem('Token')
+        // data.append('title', title)
+        // data.append('price', price)
+        // data.append('image', image)
 
-        data.append('title', title)
-        data.append('price', price)
-        data.append('image', image)
-        data.append('token', token)
+        await api.put(`/product/update/${id}`, data)
 
-        console.log(token)
-
-        await api.post('/product/register', data)
-
-        alert('Cadastro realizado com sucesso!')
+        alert('Prtoduto editado com sucesso!')
         return history.push('/')
       }
     } catch (error) {
@@ -49,16 +53,35 @@ export default function Register() {
     }
   }
 
+  async function getById() {
+    const id = localStorage.getItem('ID')
+
+    console.log(`id: ${id}`)
+
+    // const { data } = await api.get(`/`)
+    const { data } = await api.get(`/product/${id}`)
+
+    setLista(data)
+
+    console.log(data)
+
+    return lista
+  }
+
+  useEffect(() => {
+    getById()
+  }, [])
+
   return (
     <>
       <Container>
         <BodyContainer>
           <Header />
           <TextContainer>
-            <h2>Cadastro de Produtos: </h2>
+            <h2>Perfil: </h2>
             <br />
           </TextContainer>
-          <ContainerLista>
+          <>
             <form onSubmit={handleSubmit} className="janela">
               <div className="profile-container">
                 <fieldset>
@@ -69,8 +92,9 @@ export default function Register() {
                     <br />
                     <input
                       id="title"
-                      value={title}
                       onChange={(e) => setTitle(e.target.value)}
+                      placeholder={lista.title}
+                      value={title}
                     />
                   </div>
 
@@ -81,6 +105,7 @@ export default function Register() {
                       id="price"
                       value={price}
                       onChange={(e) => setPrice(e.target.value)}
+                      placeholder={lista.price}
                     />
                   </div>
 
@@ -94,17 +119,17 @@ export default function Register() {
                   </div>
                   <div className="input-block">
                     <button className="confirm-button" type="submit">
-                      Cadastrar
+                      Editar
                     </button>
                   </div>
                 </fieldset>
               </div>
             </form>
-
-            <ContainerData></ContainerData>
-          </ContainerLista>
+          </>
         </BodyContainer>
       </Container>
     </>
   )
 }
+
+export default Update

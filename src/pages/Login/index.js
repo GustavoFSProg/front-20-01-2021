@@ -13,10 +13,9 @@ import {
 } from './style'
 import './styles.css'
 
-export default function Register() {
-  const [title, setTitle] = useState('')
-  const [price, setPrice] = useState('')
-  const [image, setImage] = useState([])
+export default function Login() {
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState([])
 
   const history = useHistory()
 
@@ -24,23 +23,21 @@ export default function Register() {
     event.preventDefault()
 
     try {
-      const data = new FormData()
-
       if (!typeof price === Number) {
         return alert('O preço deve ser um numero!!')
       } else {
-        const token = localStorage.getItem('Token')
+        const dados = {
+          email,
+          password,
+        }
 
-        data.append('title', title)
-        data.append('price', price)
-        data.append('image', image)
-        data.append('token', token)
+        const { data } = await api.post('/login', dados)
 
-        console.log(token)
+        console.log('data', data)
 
-        await api.post('/product/register', data)
+        localStorage.setItem('Token', data.token)
 
-        alert('Cadastro realizado com sucesso!')
+        alert('Login realizado com sucesso!')
         return history.push('/')
       }
     } catch (error) {
@@ -55,46 +52,39 @@ export default function Register() {
         <BodyContainer>
           <Header />
           <TextContainer>
-            <h2>Cadastro de Produtos: </h2>
+            <h2>Login </h2>
             <br />
           </TextContainer>
           <ContainerLista>
             <form onSubmit={handleSubmit} className="janela">
               <div className="profile-container">
                 <fieldset>
-                  <legend>Cadastrar Produto</legend>
+                  <legend>Login</legend>
 
                   <div className="input-block">
-                    <label htmlFor="name">Titulo</label>
+                    <label htmlFor="name">Email</label>
                     <br />
                     <input
-                      id="title"
-                      value={title}
-                      onChange={(e) => setTitle(e.target.value)}
+                      id="email"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
                     />
                   </div>
 
                   <div className="input-block">
-                    <label htmlFor="name">Preço</label>
+                    <label htmlFor="name">Senha</label>
                     <br />
                     <input
-                      id="price"
-                      value={price}
-                      onChange={(e) => setPrice(e.target.value)}
+                      id="password"
+                      value={password}
+                      type="password"
+                      onChange={(e) => setPassword(e.target.value)}
                     />
                   </div>
 
-                  <div className="input-block">
-                    <input
-                      type="file"
-                      id="image"
-                      className="botao-imagem"
-                      onChange={(e) => setImage(e.target.files[0])}
-                    />
-                  </div>
                   <div className="input-block">
                     <button className="confirm-button" type="submit">
-                      Cadastrar
+                      Logar
                     </button>
                   </div>
                 </fieldset>

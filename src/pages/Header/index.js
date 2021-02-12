@@ -56,6 +56,51 @@ function Header() {
           >
             Register
           </Link>
+          <Link
+            to="/update"
+            style={{
+              display: 'flex',
+              listStyle: 'none',
+              fontFamily: 'Arial',
+              fontSize: '17px',
+              color: 'white',
+              textDecoration: 'none',
+              paddingRight: '13px',
+              fontWeight: 'bold',
+            }}
+          >
+            Update
+          </Link>
+          <Link
+            to="/login"
+            style={{
+              display: 'flex',
+              listStyle: 'none',
+              fontFamily: 'Arial',
+              fontSize: '17px',
+              color: 'white',
+              textDecoration: 'none',
+              paddingRight: '13px',
+              fontWeight: 'bold',
+            }}
+          >
+            Login
+          </Link>
+          <Link
+            to="/logout"
+            style={{
+              display: 'flex',
+              listStyle: 'none',
+              fontFamily: 'Arial',
+              fontSize: '17px',
+              color: 'white',
+              textDecoration: 'none',
+              paddingRight: '13px',
+              fontWeight: 'bold',
+            }}
+          >
+            Logout
+          </Link>
         </List>
       </ul>
     </Container>
