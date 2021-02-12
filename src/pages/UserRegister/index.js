@@ -51,7 +51,7 @@ export default function UserRegister() {
         <BodyContainer>
           <Header />
           <TextContainer>
-            <h3>Cadastro de Produtos: </h3>
+            <h3>Cadastro de Usuários: </h3>
             <br />
           </TextContainer>
           <ContainerLista>
