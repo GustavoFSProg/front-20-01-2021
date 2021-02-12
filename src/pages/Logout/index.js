@@ -8,7 +8,7 @@ export default function Logout() {
   const history = useHistory()
   localStorage.clear()
 
-  // alert('Logout efetuado com sucesso!')
+  alert('Logout efetuado com sucesso!')
 
   history.push('/')
 

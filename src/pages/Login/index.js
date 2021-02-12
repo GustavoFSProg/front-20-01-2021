@@ -83,8 +83,18 @@ export default function Login() {
                   </div>
 
                   <div className="input-block">
-                    <button className="confirm-button" type="submit">
-                      Logar
+                    <button
+                      style={{
+                        color: 'darkgreen',
+                        paddingRight: '20px',
+                        paddingLeft: '20px',
+                        background: '#ffffcc',
+                        fontSize: '15px',
+                      }}
+                      className="confirm-button"
+                      type="submit"
+                    >
+                      <strong>Logar</strong>
                     </button>
                   </div>
                 </fieldset>

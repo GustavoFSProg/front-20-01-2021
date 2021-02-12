@@ -93,8 +93,18 @@ export default function Register() {
                     />
                   </div>
                   <div className="input-block">
-                    <button className="confirm-button" type="submit">
-                      Cadastrar
+                    <button
+                      style={{
+                        color: 'darkgreen',
+                        paddingRight: '20px',
+                        paddingLeft: '20px',
+                        background: '#ffffcc',
+                        fontSize: '15px',
+                      }}
+                      className="confirm-button"
+                      type="submit"
+                    >
+                      <strong>Cadastrar</strong>
                     </button>
                   </div>
                 </fieldset>
