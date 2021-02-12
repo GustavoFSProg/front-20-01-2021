@@ -81,7 +81,7 @@ function Update() {
             <h2>Perfil: </h2>
             <br />
           </TextContainer>
-          <>
+          <ContainerLista>
             <form onSubmit={handleSubmit} className="janela">
               <div className="profile-container">
                 <fieldset>
@@ -125,7 +125,7 @@ function Update() {
                 </fieldset>
               </div>
             </form>
-          </>
+          </ContainerLista>
         </BodyContainer>
       </Container>
     </>
