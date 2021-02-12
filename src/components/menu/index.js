@@ -51,12 +51,12 @@ export default function SimpleMenu() {
       >
         <img
           src={hamburguer}
-          style={{ float: 'right', right: '160%', position: 'relative' }}
+          style={{ float: 'right', right: '70%', position: 'relative' }}
           alt="logo"
           width="18%"
         />
       </Button>
-      <div style={{ float: 'right', right: '160%', position: 'relative' }}>
+      <div style={{ float: 'right', right: '70%', position: 'relative' }}>
         <Menu
           id="simple-menu"
           anchorEl={anchorEl}
