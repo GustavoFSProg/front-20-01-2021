@@ -78,14 +78,14 @@ function Update() {
         <BodyContainer>
           <Header />
           <TextContainer>
-            <h2>Perfil: </h2>
+            <h2>Editar Produto </h2>
             <br />
           </TextContainer>
           <ContainerLista>
             <form onSubmit={handleSubmit} className="janela">
               <div className="profile-container">
                 <fieldset>
-                  <legend>Cadastrar Produto</legend>
+                  <legend>Editar Produto</legend>
 
                   <div className="input-block">
                     <label htmlFor="name">Titulo</label>
