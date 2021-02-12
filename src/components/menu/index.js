@@ -3,6 +3,7 @@ import Button from '@material-ui/core/Button'
 import Menu from '@material-ui/core/Menu'
 import MenuItem from '@material-ui/core/MenuItem'
 import { useHistory } from 'react-router-dom'
+import hamburguer from '../../assets/hambur.png'
 
 export default function SimpleMenu() {
   const [anchorEl, setAnchorEl] = React.useState(null)
@@ -44,7 +45,7 @@ export default function SimpleMenu() {
         onClick={handleClick}
         style={{ color: 'white', fontWeight: 'bold', fontSize: '15px' }}
       >
-        Menu
+        <img src={hamburguer} alt="logo" width="18%" />
       </Button>
       <Menu
         id="simple-menu"
