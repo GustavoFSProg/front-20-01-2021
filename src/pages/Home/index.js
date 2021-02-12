@@ -68,7 +68,7 @@ function Listagem() {
                       <strong>Detalhes</strong>
                     </button>
 
-                    <button
+                    {/* <button
                       type="button"
                       style={{
                         background: '#086871',
@@ -82,7 +82,7 @@ function Listagem() {
                       onClick={() => alert('You click me!')}
                     >
                       <strong>Comprar</strong>
-                    </button>
+                    </button> */}
                     <div style={{ paddingTop: '18px' }} />
 
                     <ContainerImg>
