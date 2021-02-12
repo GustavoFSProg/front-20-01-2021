@@ -33,6 +33,10 @@ export default function SimpleMenu() {
     history.push('/logout')
   }
 
+  function handleUser() {
+    history.push('/user')
+  }
+
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget)
   }
@@ -68,6 +72,7 @@ export default function SimpleMenu() {
           {/* <MenuItem onClick={handleProfile}>Perfil</MenuItem> */}
           <MenuItem onClick={handleLogin}>Login</MenuItem>
           <MenuItem onClick={handleRegister}>Cadastro</MenuItem>
+          <MenuItem onClick={handleUser}>Cadastro Usuário</MenuItem>
           <MenuItem onClick={handleUpdate}>Update</MenuItem>
           <MenuItem onClick={handleLogout}>Logout</MenuItem>
         </Menu>

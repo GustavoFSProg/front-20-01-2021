@@ -6,6 +6,7 @@ import Register from './pages/Register'
 import Update from './pages/Update'
 import Login from './pages/Login'
 import Logout from './pages/Logout'
+import User from './pages/UserRegister'
 
 export default function Routes() {
   return (
@@ -16,6 +17,7 @@ export default function Routes() {
         <Route path="/register" component={Register} />
         <Route path="/update" component={Update} />
         <Route path="/login" component={Login} />
+        <Route path="/user" component={User} />
         <Route path="/logout" component={Logout} />
       </Switch>
     </BrowserRouter>
