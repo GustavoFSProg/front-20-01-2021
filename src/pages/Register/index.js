@@ -98,7 +98,7 @@ export default function Register() {
                         color: 'darkgreen',
                         paddingRight: '20px',
                         paddingLeft: '20px',
-                        background: '#ffffcc',
+                        background: '#e6fff2',
                         fontSize: '15px',
                       }}
                       className="confirm-button"
