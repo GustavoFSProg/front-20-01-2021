@@ -6,7 +6,7 @@ import { Container, List } from './style'
 function Header() {
   return (
     <Container>
-      <SimpleMenu />
+        <SimpleMenu />
     </Container>
   )
 }

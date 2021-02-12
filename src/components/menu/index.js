@@ -49,22 +49,29 @@ export default function SimpleMenu() {
         onClick={handleClick}
         style={{ color: 'white', fontWeight: 'bold', fontSize: '15px' }}
       >
-        <img src={hamburguer} alt="logo" width="18%" />
+        <img
+          src={hamburguer}
+          style={{ float: 'right', right: '160%', position: 'relative' }}
+          alt="logo"
+          width="18%"
+        />
       </Button>
-      <Menu
-        id="simple-menu"
-        anchorEl={anchorEl}
-        keepMounted
-        open={Boolean(anchorEl)}
-        onClose={handleClose}
-      >
-        <MenuItem onClick={handleHome}>Home</MenuItem>
-        <MenuItem onClick={handleProfile}>Perfil</MenuItem>
-        <MenuItem onClick={handleLogin}>Login</MenuItem>
-        <MenuItem onClick={handleRegister}>Cadastro</MenuItem>
-        <MenuItem onClick={handleUpdate}>Update</MenuItem>
-        <MenuItem onClick={handleLogout}>Logout</MenuItem>
-      </Menu>
+      <div style={{ float: 'right', right: '160%', position: 'relative' }}>
+        <Menu
+          id="simple-menu"
+          anchorEl={anchorEl}
+          keepMounted
+          open={Boolean(anchorEl)}
+          onClose={handleClose}
+        >
+          <MenuItem onClick={handleHome}>Home</MenuItem>
+          <MenuItem onClick={handleProfile}>Perfil</MenuItem>
+          <MenuItem onClick={handleLogin}>Login</MenuItem>
+          <MenuItem onClick={handleRegister}>Cadastro</MenuItem>
+          <MenuItem onClick={handleUpdate}>Update</MenuItem>
+          <MenuItem onClick={handleLogout}>Logout</MenuItem>
+        </Menu>
+      </div>
     </div>
   )
 }
