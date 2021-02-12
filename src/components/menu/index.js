@@ -51,7 +51,7 @@ export default function SimpleMenu() {
       >
         <img
           src={hamburguer}
-          style={{ float: 'right', right: '28%', position: 'relative' }}
+          style={{ float: 'right', right: '31%', position: 'relative' }}
           alt="logo"
           width="18%"
         />
