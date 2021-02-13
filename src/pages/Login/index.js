@@ -14,8 +14,8 @@ import {
 import './styles.css'
 
 export default function Login() {
-  const [email, setEmail] = useState('')
-  const [password, setPassword] = useState([])
+  const [email, setEmail] = useState('gustavosohne38@gmail.com')
+  const [password, setPassword] = useState('gustavo@123')
 
   const history = useHistory()
 
@@ -33,16 +33,18 @@ export default function Login() {
 
         const { data } = await api.post('/login', dados)
 
-        console.log('data', data)
+        if (data) {
+          console.log('data', data)
 
-        localStorage.setItem('Token', data.token)
+          localStorage.setItem('Token', data.token)
 
-        alert('Login realizado com sucesso!')
-        return history.push('/')
+          alert('Login realizado com sucesso!')
+          return history.push('/')
+        }
       }
     } catch (error) {
       console.log(error)
-      return alert(`Deu erro no front ${error}`)
+      return alert(`Email ou senha invaidos!!!`)
     }
   }
 
