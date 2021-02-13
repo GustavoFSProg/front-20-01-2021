@@ -44,7 +44,7 @@ export default function Login() {
       }
     } catch (error) {
       console.log(error)
-      return alert(`Email ou senha invaidos!!!`)
+      return alert(`Email ou senha invalidos!!!`)
     }
   }
 
