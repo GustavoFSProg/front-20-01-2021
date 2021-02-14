@@ -94,7 +94,6 @@ function Update() {
                     <input
                       id="name"
                       onChange={(e) => setName(e.target.value)}
-                      value={name}
                     />
                   </div>
 
@@ -103,7 +102,6 @@ function Update() {
                     <br />
                     <input
                       id="email"
-                      value={email}
                       onChange={(e) => setEmail(e.target.value)}
                       type="email"
                     />
@@ -117,7 +115,6 @@ function Update() {
                       id="password"
                       className="botao-imagem"
                       onChange={(e) => setPassword(e.target.value)}
-                      value={password}
                     />
                   </div>
                   <div className="input-block">
