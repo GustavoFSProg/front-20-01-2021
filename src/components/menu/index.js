@@ -37,6 +37,10 @@ export default function SimpleMenu() {
     history.push('/user')
   }
 
+  function handleUserUpdate() {
+    history.push('/userUpate')
+  }
+
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget)
   }
@@ -71,7 +75,8 @@ export default function SimpleMenu() {
           <MenuItem onClick={handleHome}>Home</MenuItem>
           {/* <MenuItem onClick={handleProfile}>Perfil</MenuItem> */}
           <MenuItem onClick={handleLogin}>Login</MenuItem>
-          <MenuItem onClick={handleRegister}>Cadastro</MenuItem>
+          <MenuItem onClick={handleRegister}>Cadastro de Produtos</MenuItem>
+          <MenuItem onClick={handleUserUpdate}>Atualização de Usuário</MenuItem>
           <MenuItem onClick={handleUser}>Cadastro Usuário</MenuItem>
           <MenuItem onClick={handleUpdate}>Update</MenuItem>
           <MenuItem onClick={handleLogout}>Logout</MenuItem>

@@ -7,6 +7,7 @@ import Update from './pages/Update'
 import Login from './pages/Login'
 import Logout from './pages/Logout'
 import User from './pages/UserRegister'
+import UserUpdate from './pages/UserUpdate'
 
 export default function Routes() {
   return (
@@ -18,6 +19,7 @@ export default function Routes() {
         <Route path="/update" component={Update} />
         <Route path="/login" component={Login} />
         <Route path="/user" component={User} />
+        <Route path="/userUpate" component={UserUpdate} />
         <Route path="/logout" component={Logout} />
       </Switch>
     </BrowserRouter>

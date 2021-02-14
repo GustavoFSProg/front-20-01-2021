@@ -11,44 +11,67 @@ import {
   ContainerData,
   TextContainer,
 } from './style'
-import './styles.css'
+function Update() {
+  const [name, setName] = useState('')
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState([])
 
-export default function Login() {
-  const [email, setEmail] = useState('gustavosohne38@gmail.com')
-  const [password, setPassword] = useState('')
-
+  const [lista, setLista] = useState([])
   const history = useHistory()
 
   async function handleSubmit(event) {
     event.preventDefault()
 
     try {
+      const id = localStorage.getItem('UserID')
+      const token = localStorage.getItem('Token')
+      // const data = new FormData()
+
+      console.log(token)
+
+      const data = {
+        name,
+        email,
+        password,
+        token,
+      }
+
       if (!typeof price === Number) {
         return alert('O preço deve ser um numero!!')
       } else {
-        const dados = {
-          email,
-          password,
-        }
+        // data.append('title', title)
+        // data.append('price', price)
+        // data.append('image', image)
 
-        const { data } = await api.post('/login', dados)
+        await api.put(`/update/${id}`, data)
 
-        if (data) {
-          console.log('data 1: ', data)
-
-          localStorage.setItem('Token', data.token)
-
-          localStorage.setItem('UserID', data.data._id)
-
-          alert('Login realizado com sucesso!')
-          return history.push('/')
-        }
+        alert('Usuario editado com sucesso!')
+        return history.push('/')
       }
     } catch (error) {
       console.log(error)
-      return alert(`Email ou senha invalidos!!!`)
+      return alert(`Deu erro no front ${error}`)
     }
   }
+
+  async function getById() {
+    const id = localStorage.getItem('UserID')
+
+    console.log(`id: ${id}`)
+
+    // const { data } = await api.get(`/`)
+    const { data } = await api.get(`/userOne/${id}`)
+
+    setLista(data)
+
+    console.log(data)
+
+    return lista
+  }
+
+  useEffect(() => {
+    getById()
+  }, [])
 
   return (
     <>
@@ -56,14 +79,25 @@ export default function Login() {
         <BodyContainer>
           <Header />
           <TextContainer>
-            <h2>Login </h2>
+            <h3>Editar Produto </h3>
             <br />
           </TextContainer>
           <ContainerLista>
             <form onSubmit={handleSubmit} className="janela">
               <div className="profile-container">
                 <fieldset>
-                  <legend>Login</legend>
+                  <legend>Editar Produto</legend>
+
+                  <div className="input-block">
+                    <label htmlFor="name">Nome</label>
+                    <br />
+                    <input
+                      id="name"
+                      onChange={(e) => setName(e.target.value)}
+                      placeholder={lista.name}
+                      value={name}
+                    />
+                  </div>
 
                   <div className="input-block">
                     <label htmlFor="name">Email</label>
@@ -72,6 +106,8 @@ export default function Login() {
                       id="email"
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
+                      placeholder={lista.email}
+                      type="email"
                     />
                   </div>
 
@@ -79,13 +115,12 @@ export default function Login() {
                     <label htmlFor="name">Senha</label>
                     <br />
                     <input
-                      id="password"
-                      value={password}
                       type="password"
+                      id="password"
+                      className="botao-imagem"
                       onChange={(e) => setPassword(e.target.value)}
                     />
                   </div>
-
                   <div className="input-block">
                     <button
                       style={{
@@ -98,17 +133,17 @@ export default function Login() {
                       className="confirm-button"
                       type="submit"
                     >
-                      <strong>Logar</strong>
+                      <strong>Editar</strong>
                     </button>
                   </div>
                 </fieldset>
               </div>
             </form>
-
-            <ContainerData></ContainerData>
           </ContainerLista>
         </BodyContainer>
       </Container>
     </>
   )
 }
+
+export default Update
