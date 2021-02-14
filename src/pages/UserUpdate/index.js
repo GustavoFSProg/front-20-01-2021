@@ -14,7 +14,7 @@ import {
 function Update() {
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
-  const [password, setPassword] = useState([])
+  const [password, setPassword] = useState('')
 
   const [lista, setLista] = useState([])
   const history = useHistory()
