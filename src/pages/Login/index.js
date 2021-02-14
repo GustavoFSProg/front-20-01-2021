@@ -15,7 +15,7 @@ import './styles.css'
 
 export default function Login() {
   const [email, setEmail] = useState('gustavosohne38@gmail.com')
-  const [password, setPassword] = useState('gustavo@123')
+  const [password, setPassword] = useState('')
 
   const history = useHistory()
 
