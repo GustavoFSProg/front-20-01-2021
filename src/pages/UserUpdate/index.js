@@ -79,14 +79,14 @@ function Update() {
         <BodyContainer>
           <Header />
           <TextContainer>
-            <h3>Editar Produto </h3>
+            <h3>Editar Usuário </h3>
             <br />
           </TextContainer>
           <ContainerLista>
             <form onSubmit={handleSubmit} className="janela">
               <div className="profile-container">
                 <fieldset>
-                  <legend>Editar Produto</legend>
+                  <legend>Editar Usuário</legend>
 
                   <div className="input-block">
                     <label htmlFor="name">Nome</label>
@@ -94,7 +94,6 @@ function Update() {
                     <input
                       id="name"
                       onChange={(e) => setName(e.target.value)}
-                      placeholder={lista.name}
                       value={name}
                     />
                   </div>
@@ -106,7 +105,6 @@ function Update() {
                       id="email"
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
-                      placeholder={lista.email}
                       type="email"
                     />
                   </div>
