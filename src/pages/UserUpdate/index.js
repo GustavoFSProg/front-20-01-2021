@@ -117,6 +117,7 @@ function Update() {
                       id="password"
                       className="botao-imagem"
                       onChange={(e) => setPassword(e.target.value)}
+                      value={password}
                     />
                   </div>
                   <div className="input-block">
