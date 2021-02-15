@@ -24,8 +24,7 @@ export const Form = styled.form`
   margin: 64px auto;
   height: 80%;
 
-  /* background: #f2f2f2; */
-  background: red;
+  background: #f2f2f2;
   border: 1px solid #d3e2e5;
   border-radius: 20px;
 
@@ -68,7 +67,7 @@ export const ContainerImg = styled.div`
   flex-direction: row;
 `
 export const InputBlock = styled.div`
-  width: 110%;
+  width: 100%;
   padding-left: 20px;
   padding-bottom: 17px;
 `

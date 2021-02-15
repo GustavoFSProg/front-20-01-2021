@@ -74,11 +74,13 @@ export default function Register() {
             >
               <ProfileContainer>
                 <fieldset>
-                  <Legend>Cadastrar Produto</Legend>
+                  <Legend style={{ fontSize: '20px', paddingBottom: '80px' }}>
+                    Cadastrar Produto
+                  </Legend>
 
                   <div
                     style={{
-                      width: '110%',
+                      width: '102%',
                       paddingLeft: '20px',
                       paddingBottom: '17px',
                     }}
@@ -97,7 +99,6 @@ export default function Register() {
                     <br />
                     <input
                       style={{
-                        width: '110%',
                         paddingLeft: '20px',
                         paddingBottom: '17px',
                       }}
@@ -108,9 +109,11 @@ export default function Register() {
                   </InputBlock>
 
                   <InputBlock className="input-block">
+                    <label htmlFor="name">Imagem</label>
+                    <br />
                     <input
                       style={{
-                        width: '110%',
+                        // width: '100%',
                         paddingLeft: '20px',
                         paddingBottom: '17px',
                       }}
