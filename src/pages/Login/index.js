@@ -1,17 +1,11 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { useHistory } from 'react-router-dom'
 import api from '../../services/api'
-import Header from '../Header/index'
-import {
-  ContainerImg,
-  Container,
-  ContainerLista,
-  Lista,
-  BodyContainer,
-  ContainerData,
-  TextContainer,
-} from './style'
-import './styles.css'
+import Header from '../../components/Header'
+import Container from '../../components/Container'
+import HeaderTitle from '../../components/HeaderTitle'
+import { ContainerLista, Form, FormGroup, Legend, InputBlock } from './style'
+// import './styles.css'
 
 export default function Login() {
   const [email, setEmail] = useState('gustavosohne38@gmail.com')
@@ -51,64 +45,56 @@ export default function Login() {
   }
 
   return (
-    <>
-      <Container>
-        <BodyContainer>
-          <Header />
-          <TextContainer>
-            <h2>Login </h2>
-            <br />
-          </TextContainer>
-          <ContainerLista>
-            <form onSubmit={handleSubmit} className="janela">
-              <div className="profile-container">
-                <fieldset>
-                  <legend>Login</legend>
+    <Container>
+      <Header />
+      <HeaderTitle>Login </HeaderTitle>
 
-                  <div className="input-block">
-                    <label htmlFor="name">Email</label>
-                    <br />
-                    <input
-                      id="email"
-                      value={email}
-                      onChange={(e) => setEmail(e.target.value)}
-                    />
-                  </div>
+      <ContainerLista>
+        <Form>
+          <FormGroup>
+            <fieldset>
+              <Legend>Login</Legend>
 
-                  <div className="input-block">
-                    <label htmlFor="name">Senha</label>
-                    <br />
-                    <input
-                      id="password"
-                      value={password}
-                      type="password"
-                      onChange={(e) => setPassword(e.target.value)}
-                    />
-                  </div>
+              <InputBlock>
+                <label htmlFor="name">Email</label>
+                <br />
+                <input
+                  id="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                />
+              </InputBlock>
 
-                  <div className="input-block">
-                    <button
-                      style={{
-                        color: 'darkgreen',
-                        paddingRight: '20px',
-                        paddingLeft: '20px',
-                        background: '#e6fff2',
-                        fontSize: '15px',
-                      }}
-                      className="confirm-button"
-                      type="submit"
-                    >
-                      <strong>Logar</strong>
-                    </button>
-                  </div>
-                </fieldset>
-              </div>
-            </form>
+              <InputBlock>
+                <label htmlFor="name">Senha</label>
+                <br />
+                <input
+                  id="password"
+                  value={password}
+                  type="password"
+                  onChange={(e) => setPassword(e.target.value)}
+                />
+              </InputBlock>
 
-            <ContainerData></ContainerData>
-          </ContainerLista>
-        </BodyContainer>
-      </Container>
-    </>
+              <InputBlock>
+                <button
+                  style={{
+                    color: 'darkgreen',
+                    paddingRight: '20px',
+                    paddingLeft: '20px',
+                    background: '#e6fff2',
+                    fontSize: '15px',
+                  }}
+                  className="confirm-button"
+                  onClick={() => handleSubmit()}
+                >
+                  <strong>Logar</strong>
+                </button>
+              </InputBlock>
+            </fieldset>
+          </FormGroup>
+        </Form>
+      </ContainerLista>
+    </Container>
   )
 }

@@ -1,8 +1,8 @@
 import React from 'react'
 import { useHistory } from 'react-router-dom'
-import Header from '../Header/index'
+import Header from '../../components/Header'
 
-import './styles.css'
+// import './styles.css'
 
 export default function Logout() {
   const history = useHistory()

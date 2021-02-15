@@ -1,17 +1,18 @@
 import React, { useEffect, useState } from 'react'
 import { useHistory } from 'react-router-dom'
 import api from '../../services/api'
-import Header from '../Header/index'
+import Container from '../../components/Container'
+import Header from '../../components/Header'
+
 import {
   ContainerImg,
-  Container,
   ContainerLista,
   Lista,
   BodyContainer,
   ContainerData,
   TextContainer,
 } from './style'
-import './styles.css'
+// import './styles.css'
 
 export default function Register() {
   const [title, setTitle] = useState('')

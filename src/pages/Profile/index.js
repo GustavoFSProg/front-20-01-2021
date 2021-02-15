@@ -1,129 +1,44 @@
 import React, { useEffect, useState } from 'react'
-import { useHistory } from 'react-router-dom'
+// import { useHistory } from 'react-router-dom'
 import api from '../../services/api'
-import Header from '../Header/index'
-import {
-  ContainerImg,
-  Container,
-  ContainerLista,
-  Lista,
-  BodyContainer,
-  ContainerData,
-  TextContainer,
-} from './style'
+import Header from '../../components/Header'
+import Container from '../../components/Container'
+import Card from '../../components/Card'
+import HeaderTitle from '../../components/HeaderTitle'
+
 function Profile() {
-  const [lista, setLista] = useState([])
-  const history = useHistory()
+  const [list, setList] = useState([])
+  // const history = useHistory()
 
   async function getById() {
     const id = localStorage.getItem('ID')
-
     console.log(`id: ${id}`)
-
     // const { data } = await api.get(`/`)
     const { data } = await api.get(`/product/${id}`)
-
-    setLista(data)
-
+    setList(data)
     console.log(data)
-
-    return lista
+    return list
   }
 
   useEffect(() => {
     getById()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   return (
-    <>
-      <Container>
-        <BodyContainer>
-          <Header />
-          <TextContainer>
-            <h2>Perfil: </h2>
-            <br />
-          </TextContainer>
-          <>
-            <ul key={lista._id}>
-              <ContainerLista>
-                <button
-                  type="button"
-                  style={{
-                    background: '#086871',
-                    color: 'yellow',
-                    padding: '5px',
-                    borderRadius: '7px',
-                    border: '1px solid #086871',
-                    fontSize: '14px',
-                  }}
-                  onClick={() => alert('You click me!')}
-                >
-                  <strong>Comprar</strong>
-                </button>
-                <div style={{ paddingTop: '18px' }} />
+    <Container>
+      <Header />
+      <HeaderTitle>Perfil:</HeaderTitle>
 
-                <ContainerImg>
-                  <img
-                    style={{ width: '25%' }}
-                    src={`https://api-ultima.herokuapp.com/files/${lista.image}`}
-                    alt="imagem"
-                  />
-
-                  <ContainerData>
-                    <Lista>
-                      <strong>Nome: </strong>
-                      {lista.title}
-                    </Lista>
-                    <Lista>
-                      <strong>Preço: </strong>
-                      {lista.price}
-                    </Lista>
-                  </ContainerData>
-                </ContainerImg>
-              </ContainerLista>
-            </ul>
-          </>
-          <ul key={lista._id}>
-            <ContainerLista>
-              <button
-                type="button"
-                style={{
-                  background: '#086871',
-                  color: 'yellow',
-                  padding: '5px',
-                  borderRadius: '7px',
-                  border: '1px solid #086871',
-                  fontSize: '14px',
-                }}
-                onClick={() => alert('You click me!')}
-              >
-                <strong>Comprar</strong>
-              </button>
-              <div style={{ paddingTop: '18px' }} />
-
-              <ContainerImg>
-                <img
-                  style={{ width: '25%' }}
-                  src={`https://api-ultima.herokuapp.com/files/${lista.image}`}
-                  alt="imagem"
-                />
-
-                <ContainerData>
-                  <Lista>
-                    <strong>Nome: </strong>
-                    {lista.title}
-                  </Lista>
-                  <Lista>
-                    <strong>Preço: </strong>
-                    {lista.price}
-                  </Lista>
-                </ContainerData>
-              </ContainerImg>
-            </ContainerLista>
-          </ul>
-        </BodyContainer>
-      </Container>
-    </>
+      <Card
+        key={list._id}
+        id={list._id}
+        getById={getById}
+        imageSource={list.image}
+        title={list.title}
+        price={list.price}
+      />
+    </Container>
   )
 }
 

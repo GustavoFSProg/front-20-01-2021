@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useHistory } from 'react-router-dom'
 import api from '../../services/api'
-import Header from '../Header/index'
+import Header from '../../components/Header'
 import {
   ContainerImg,
   Container,
@@ -11,6 +11,7 @@ import {
   ContainerData,
   TextContainer,
 } from './style'
+
 function Update() {
   const [title, setTitle] = useState('')
   const [price, setPrice] = useState('')
