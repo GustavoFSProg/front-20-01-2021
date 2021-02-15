@@ -50,11 +50,12 @@ function Profile() {
                   type="button"
                   style={{
                     background: '#086871',
+                    padding: '10px',
                     color: 'yellow',
-                    padding: '5px',
+                    marginBottom: '4px',
                     borderRadius: '7px',
                     border: '1px solid #086871',
-                    fontSize: '14px',
+                    fontSize: '16px',
                   }}
                   onClick={() => alert('You click me!')}
                 >
@@ -89,11 +90,12 @@ function Profile() {
                 type="button"
                 style={{
                   background: '#086871',
+                  padding: '10px',
                   color: 'yellow',
-                  padding: '5px',
+                  marginBottom: '4px',
                   borderRadius: '7px',
                   border: '1px solid #086871',
-                  fontSize: '14px',
+                  fontSize: '16px',
                 }}
                 onClick={() => alert('You click me!')}
               >

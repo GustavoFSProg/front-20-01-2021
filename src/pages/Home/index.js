@@ -56,12 +56,12 @@ function Listagem() {
                       type="button"
                       style={{
                         background: '#086871',
-                        padding: '5px',
+                        padding: '10px',
                         color: 'yellow',
                         marginBottom: '4px',
                         borderRadius: '7px',
                         border: '1px solid #086871',
-                        fontSize: '14px',
+                        fontSize: '16px',
                       }}
                       onClick={() => getById(list._id)}
                     >
