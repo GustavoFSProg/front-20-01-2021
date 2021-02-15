@@ -11,7 +11,7 @@ import {
   ContainerData,
   TextContainer,
 } from './style'
-import './styles.css'
+// import './styles.css'
 
 export default function Login() {
   const [email, setEmail] = useState('gustavosohne38@gmail.com')

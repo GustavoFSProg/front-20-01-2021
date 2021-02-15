@@ -32,7 +32,7 @@ export const BodyContainer = styled.div`
 `
 
 export const ContainerLista = styled.div`
-  background: #478e95;
+  background: #badbde;
   padding: 24px;
   border-radius: 8px;
   position: relative;
@@ -40,7 +40,6 @@ export const ContainerLista = styled.div`
   display: flex;
   flex-direction: column;
   width: 95%;
- 
 
   @media screen and (max-width: 600px) {
     width: 62%;

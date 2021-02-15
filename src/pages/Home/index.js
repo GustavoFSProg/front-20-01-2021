@@ -68,21 +68,6 @@ function Listagem() {
                       <strong>Detalhes</strong>
                     </button>
 
-                    {/* <button
-                      type="button"
-                      style={{
-                        background: '#086871',
-                        color: 'yellow',
-                        padding: '5px',
-                        borderRadius: '7px',
-                        border: '1px solid #086871',
-                        fontSize: '14px',
-                      }}
-                      // onClick={() => history.push('/cart')}
-                      onClick={() => alert('You click me!')}
-                    >
-                      <strong>Comprar</strong>
-                    </button> */}
                     <div style={{ paddingTop: '18px' }} />
 
                     <ContainerImg>

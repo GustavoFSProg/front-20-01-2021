@@ -31,7 +31,7 @@ export const BodyContainer = styled.div`
 `
 
 export const ContainerLista = styled.div`
-  background: #478e95;
+  background: #badbde;
   padding: 24px;
   border-radius: 8px;
   position: relative;

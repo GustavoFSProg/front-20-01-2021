@@ -3,11 +3,11 @@ import React from 'react'
 import styled from 'styled-components'
 
 export const Container = styled.div`
-  width: 100%;
+  /* width: 100%;
   max-width: 100%;
   height: auto;
   /* margin: 32px auto; */
-  background: #77b4ba;
+  background: #77b4ba; */
 
   justify-content: center;
   display: flex;
