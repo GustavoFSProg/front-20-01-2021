@@ -39,7 +39,7 @@ export const ContainerLista = styled.div`
   border: 1px solid #d9d9d9;
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 96.2%;
 
   @media screen and (max-width: 600px) {
     width: 120%;

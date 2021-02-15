@@ -7,7 +7,7 @@ export const Container = styled.div`
   display: flex;
   /* height: 50%; */
   color: white;
-  width: 100vw;
+  width: 101vw;
 
   @media screen and (max-width: 600px) {
     width: 110vw;
