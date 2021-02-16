@@ -7,10 +7,13 @@ export const Container = styled.div`
   max-width: 100%;
   height: auto;
   /* margin: 32px auto; */
-  background: #77b4ba; */
+  background: #77b4ba;
+  width: 100%;
+  height: 100vh;
+  max-width: 100%;
 
-  justify-content: center;
-  display: flex;
+  align-items: center;
+  /* justify-content: center; */
 `
 export const ContainerData = styled.div`
   display: flex;
@@ -28,22 +31,43 @@ export const BodyContainer = styled.div`
   justify-content: center;
   flex-direction: column;
   margin-left: -25px;
+  height: 100%;
   /* align-items: center; */
+  /* background: orange; */
 `
 
+export const Form = styled.form`
+  width: 700px;
+  margin: 64px auto;
+  height: 80%;
+
+  background: #f2f2f2;
+  border: 1px solid #d3e2e5;
+  border-radius: 20px;
+
+  /* padding: 64px 80px; */
+
+  overflow: hidden;
+
+  @media screen and (max-width: 600px) {
+    width: 90%;
+  }
+`
 export const ContainerLista = styled.div`
   background: #478e95;
+  /* background: yellow; */
   padding: 24px;
   border-radius: 8px;
   position: relative;
   border: 1px solid #d9d9d9;
   display: flex;
   flex-direction: column;
-  width: 96.2%;
+  width: 90%;
+  margin-left: 35px;
 
-  @media screen and (max-width: 600px) {
-    width: 120%;
-    margin-left: -50px;
+  @media screen and (max-width: 900px) {
+    width: 87%;
+    margin-left: -10px;
   }
 `
 export const Lista = styled.ul`

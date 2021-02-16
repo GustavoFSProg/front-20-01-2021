@@ -7,11 +7,11 @@ import {
   Container,
   ContainerLista,
   Lista,
+  Form,
   BodyContainer,
   ContainerData,
   TextContainer,
 } from './style'
-// import './styles.css'
 
 export default function Login() {
   const [email, setEmail] = useState('gustavosohne38@gmail.com')
@@ -53,61 +53,60 @@ export default function Login() {
   return (
     <>
       <Container>
-        <BodyContainer>
-          <Header />
-          <TextContainer>
-            <h2>Login </h2>
-            <br />
-          </TextContainer>
-          <ContainerLista>
-            <form onSubmit={handleSubmit} className="janela">
-              <div className="profile-container">
-                <fieldset>
-                  <legend>Login</legend>
+        <Header />
+        <TextContainer>
+          <h2>Login </h2>
+          <br />
+        </TextContainer>
+        <ContainerLista>
+          <Form onSubmit={handleSubmit} className="janela">
+            <div className="profile-container">
+              <fieldset>
+                <legend>Login</legend>
 
-                  <div className="input-block">
-                    <label htmlFor="name">Email</label>
-                    <br />
-                    <input
-                      id="email"
-                      value={email}
-                      onChange={(e) => setEmail(e.target.value)}
-                    />
-                  </div>
+                <div className="input-block">
+                  <label htmlFor="name">Email</label>
+                  <br />
+                  <input
+                    id="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                  />
+                </div>
 
-                  <div className="input-block">
-                    <label htmlFor="name">Senha</label>
-                    <br />
-                    <input
-                      id="password"
-                      value={password}
-                      type="password"
-                      onChange={(e) => setPassword(e.target.value)}
-                    />
-                  </div>
+                <div className="input-block">
+                  <label htmlFor="name">Senha</label>
+                  <br />
+                  <input
+                    id="password"
+                    value={password}
+                    type="password"
+                    onChange={(e) => setPassword(e.target.value)}
+                  />
+                </div>
 
-                  <div className="input-block">
-                    <button
-                      style={{
-                        color: 'darkgreen',
-                        paddingRight: '20px',
-                        paddingLeft: '20px',
-                        background: '#e6fff2',
-                        fontSize: '15px',
-                      }}
-                      className="confirm-button"
-                      type="submit"
-                    >
-                      <strong>Logar</strong>
-                    </button>
-                  </div>
-                </fieldset>
-              </div>
-            </form>
+                <div className="input-block">
+                  <button
+                    style={{
+                      color: 'darkgreen',
+                      paddingRight: '20px',
+                      paddingLeft: '20px',
+                      background: '#e6fff2',
+                      fontSize: '15px',
+                    }}
+                    className="confirm-button"
+                    type="submit"
+                  >
+                    <strong>Logar</strong>
+                  </button>
+                </div>
+              </fieldset>
+            </div>
+          </Form>
 
-            <ContainerData></ContainerData>
-          </ContainerLista>
-        </BodyContainer>
+          <ContainerData></ContainerData>
+        </ContainerLista>
+        {/* </BodyContainer> */}
       </Container>
     </>
   )

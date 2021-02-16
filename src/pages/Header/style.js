@@ -10,7 +10,7 @@ export const Container = styled.div`
   width: 101vw;
 
   @media screen and (max-width: 600px) {
-    width: 110vw;
+    width: 99vw;
   }
 `
 export const List = styled.li`
